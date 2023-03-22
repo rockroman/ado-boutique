@@ -1,4 +1,4 @@
-{% load static s%}
+{% load static %}
 <!doctype html>
 <html lang="en">
   <head>
@@ -39,6 +39,17 @@
         
     {% endif %}
 
+
+    
+    {% block page_header %}
+    {% endblock  %}
+
+    {% block content %}
+    {% endblock  %}
+
+
+    {% block postloadjs %}
+    {% endblock  %}
 
 
 
