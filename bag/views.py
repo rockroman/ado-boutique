@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 
 # Create your views here.
+
+
 def view_bag(request):
     """
     view to render bag content page
@@ -10,10 +12,10 @@ def view_bag(request):
 
 def add_to_bag(request, item_id):
     """
-    add quantity of chosen product 
+    add quantity of chosen product
     to the shopping bag
     """
-    quantity = int( request.POST.get('quantity'))
+    quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
     bag = request.session.get('bag', {})
 
